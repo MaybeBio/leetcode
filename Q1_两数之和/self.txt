@@ -14,6 +14,30 @@ class Solution(object):
                 else:
                     continue 
 
+2，如果使用hash table：
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        # 先初始化1个hash表，空的字典
+        hash_table={}
+        # 再开始第1轮for循环，第1个指针
+        for i in range(len(nums)):
+            if target-nums[i] in hash_table:
+                return [i,hash_table[target-nums[i]]]
+                # 注意hash table存储的key是值，value是index
+            else:
+                hash_table[nums[i]] = i
+        return []
+
+
+
+        
+
 
 
 
