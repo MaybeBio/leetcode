@@ -14,7 +14,7 @@ class Solution(object):
                 else:
                     continue 
 
-![image](https://github.com/user-attachments/assets/2684ca23-7c51-4d77-910f-305db3b29ce7)
+
 
 
 
