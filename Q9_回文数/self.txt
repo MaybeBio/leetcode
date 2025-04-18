@@ -36,4 +36,5 @@ class Solution(object):
             return False
 
 ——》或者：return [True if str(x)==str(x)[::-1] False]
+——》或者：return str(x)==str(x)[::-1]
         
