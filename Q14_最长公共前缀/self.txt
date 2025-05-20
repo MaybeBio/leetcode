@@ -1,0 +1,17 @@
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        substring_0 = [] # 先初始化存储子串0的所有前缀
+        substring_0_hit = {} # 我的想法是对于所有的前缀，构建1个计数count的hash表
+        if len(strs) == 0: # 空列表判断，防止空列表index操作越界
+            return ""
+        for j in range(len(strs[0]): # 提取strs[0]的所有前缀子串
+            substring_0.append(strs[0][0:j+1])
+        for sub in substring_0: # 对strs[0]中的所有前缀子串，在strs中遍历获取hash表的计数
+            substring_0_hit[sub] = 0
+            for i in strs:
+                if i.startswith(sub):
+                    substring_0_hit[sub] += 1
+        for i in list(substring_0_hit.keys())[::-1]: # 逆序查找第1个hit符合len(strs)的key
+            if substring_0_hit[i] == len(strs):
+                return i
+        return ""    
