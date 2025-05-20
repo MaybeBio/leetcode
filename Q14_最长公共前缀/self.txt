@@ -1,3 +1,5 @@
+1，本质：先从任意1个字符串中初始化1个公共前缀数组，再循环比对
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         substring_0 = [] # 先初始化存储子串0的所有前缀
